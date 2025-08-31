@@ -23,8 +23,8 @@
         </div>
       </div>
 
-      <!-- Body / Details -->
-      <div style="padding:24px; display:grid; grid-template-columns: 1fr 140px; gap:20px; align-items:start;">
+      <!-- Body / Details (now single-column; photo comes AFTER details like an ID card) -->
+      <div style="padding:24px; display:grid; grid-template-columns: 1fr; gap:20px; align-items:start;">
         
         <!-- Student info -->
         <div style="display:grid; gap:14px;">
@@ -53,11 +53,19 @@
           </div>
         </div>
 
-<!-- Photo -->
-<div style="width:140px; height:160px; border:2px solid #ccc; border-radius:8px; overflow:hidden; background:#f9f9f9; display:flex; align-items:center; justify-content:center;">
-  <img src="sj_p.png" alt="Student Photo" style="width:100%; height:100%; object-fit:contain; background:#f9f9f9;" />
-</div>
-</div>
+        <!-- Photo (below all details, centered like an ID card) -->
+        <div style="display:flex; justify-content:center; align-items:center; margin-top:6px;">
+          <div style="width:160px; padding:8px; border:2px solid #ccc; border-radius:10px; background:#fff; box-shadow:0 4px 8px rgba(0,0,0,0.04); display:flex; align-items:center; justify-content:center; overflow:hidden;">
+            <!--
+              Use max-width / max-height so the full image is visible (no cropping).
+              If your original image is large, this will scale it down while preserving the whole photo.
+            -->
+            <img src="sj_p.png" alt="Student Photo"
+                 style="display:block; max-width:100%; max-height:220px; width:auto; height:auto; object-fit:contain; border-radius:6px;" />
+          </div>
+        </div>
+
+      </div>
 
       <!-- CTA -->
       <div style="padding:0 24px 24px; display:flex; gap:12px; flex-wrap:wrap;">
